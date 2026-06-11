@@ -1,0 +1,166 @@
+{
+  "tool": "gate",
+  "generated_at": "2026-06-11T13:27:04.678Z",
+  "status": "fail",
+  "gate": {
+    "fail_on": "both",
+    "min_coverage": 0,
+    "max_uncovered": null
+  },
+  "report": {
+    "report_status": "complete",
+    "totals": {
+      "required": 40,
+      "covered": 26,
+      "missing": 12,
+      "distorted": 1,
+      "out_of_scope": 1,
+      "waived": 0,
+      "unverdicted": 0
+    },
+    "coverage_percent": 67.5,
+    "drift": {
+      "missing": [
+        {
+          "claim_id": "claim_016",
+          "source_file": "spec.md",
+          "source_line": 29,
+          "source_text": "Secondary action: \"Status prüfen\".",
+          "reason": "secondary action \"Status prüfen\" was not implemented",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_027",
+          "source_file": "spec.md",
+          "source_line": 43,
+          "source_text": "Button contrast must be readable in desktop and mobile screenshots.",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_029",
+          "source_file": "spec.md",
+          "source_line": 45,
+          "source_text": "Desktop and mobile layouts must both be tested with browser screenshots.",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_030",
+          "source_file": "spec.md",
+          "source_line": 49,
+          "source_text": "A WordPress test page containing the shortcode must exist or be created by the test harness.",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_031",
+          "source_file": "spec.md",
+          "source_line": 50,
+          "source_text": "Playwright/browser evidence is mandatory.",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_033",
+          "source_file": "spec.md",
+          "source_line": 52,
+          "source_text": "shortcode renders the current plugin, not a sibling plugin;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_034",
+          "source_file": "spec.md",
+          "source_line": 53,
+          "source_text": "theme chrome is hidden;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_035",
+          "source_file": "spec.md",
+          "source_line": 54,
+          "source_text": "form fields are visible and usable;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_036",
+          "source_file": "spec.md",
+          "source_line": 55,
+          "source_text": "submit keeps the same browser page without reload;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_037",
+          "source_file": "spec.md",
+          "source_line": 56,
+          "source_text": "success/status UI appears after submit;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_039",
+          "source_file": "spec.md",
+          "source_line": 58,
+          "source_text": "desktop and mobile screenshots are captured;",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        },
+        {
+          "claim_id": "claim_040",
+          "source_file": "spec.md",
+          "source_line": 59,
+          "source_text": "console errors and failed browser requests are blocking.",
+          "reason": "browser evidence not produced in this static validation run",
+          "approved_by": "",
+          "evidence": []
+        }
+      ],
+      "distorted": [
+        {
+          "claim_id": "claim_038",
+          "source_file": "spec.md",
+          "source_line": 57,
+          "source_text": "secondary actions are visible and readable;",
+          "reason": "only one of two secondary actions exists; \"Status prüfen\" is absent",
+          "approved_by": "",
+          "evidence": []
+        }
+      ]
+    },
+    "waived": [],
+    "out_of_scope_claims": [
+      {
+        "claim_id": "claim_032",
+        "source_file": "spec.md",
+        "source_line": 51,
+        "source_text": "Required checks:",
+        "reason": "structural list introduction line, not a standalone requirement",
+        "approved_by": "",
+        "evidence": []
+      }
+    ],
+    "additions": [],
+    "unverdicted_claim_ids": []
+  },
+  "uncovered_changes": [],
+  "blocking_findings": [
+    "12 requirement(s) missing from the implementation",
+    "1 requirement(s) implemented differently than specified"
+  ],
+  "warnings": []
+}

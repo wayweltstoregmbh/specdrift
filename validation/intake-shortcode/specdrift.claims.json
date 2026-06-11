@@ -1,0 +1,1053 @@
+{
+  "$schema": "https://specdrift.dev/schemas/claims.schema.json",
+  "schema_version": "1.0",
+  "tool": "specdrift extract",
+  "extracted_at": "2026-06-11T13:27:04.435Z",
+  "sources": [
+    {
+      "file": "spec.md",
+      "hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "line_count": 68
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_001",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 5,
+      "source_line_end": 5,
+      "source_text": "Build a small WordPress shortcode MVP that lets a visitor submit a generic intake request and immediately receive a visible reference number and next-step status without a page reload.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Product Goal"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_002",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 9,
+      "source_line_end": 9,
+      "source_text": "WordPress plugin.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Format"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_003",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 10,
+      "source_line_end": 10,
+      "source_text": "Shortcode: `[example_intake]`.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Format"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_004",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 11,
+      "source_line_end": 11,
+      "source_text": "The shortcode app must render as a focused fullscreen application surface.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Format"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_005",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 12,
+      "source_line_end": 12,
+      "source_text": "Theme header, footer, page title, and common block-theme chrome must be hidden while the app is active.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Format"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_006",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 13,
+      "source_line_end": 13,
+      "source_text": "No build pipeline, no external APIs, no database persistence for the MVP.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Format"
+      ],
+      "claim_type": "technical_must",
+      "strength": "context",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "technical_mechanism"
+      ],
+      "evidence_candidates": [
+        "architecture_review",
+        "unit_or_integration_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_007",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 17,
+      "source_line_end": 17,
+      "source_text": "Visitor: submits a request and wants immediate confirmation.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Target Users"
+      ],
+      "claim_type": "feature",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_008",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 18,
+      "source_line_end": 18,
+      "source_text": "Internal reviewer: only represented by the status copy in this MVP, no admin UI required.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Target Users"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_009",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 22,
+      "source_line_end": 22,
+      "source_text": "Hero area with product label \"Example Product\" and title \"Intake Request\".",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_010",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 23,
+      "source_line_end": 23,
+      "source_text": "Form fields:",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_011",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 24,
+      "source_line_end": 24,
+      "source_text": "Name.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_012",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 25,
+      "source_line_end": 25,
+      "source_text": "E-Mail.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "data",
+      "strength": "context",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "compliance"
+      ],
+      "evidence_candidates": [
+        "compliance_review",
+        "data_schema_review"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_013",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 26,
+      "source_line_end": 26,
+      "source_text": "Kategorie with at least three options.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_014",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 27,
+      "source_line_end": 27,
+      "source_text": "Anliegen as multiline text.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_015",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 28,
+      "source_line_end": 28,
+      "source_text": "Primary action: \"Einschätzung anfordern\".",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_016",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 29,
+      "source_line_end": 29,
+      "source_text": "Secondary action: \"Status prüfen\".",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_017",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 30,
+      "source_line_end": 30,
+      "source_text": "Secondary detail action: \"Details anzeigen\".",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_018",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 31,
+      "source_line_end": 31,
+      "source_text": "After submit, update the same page in-place with:",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_019",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 32,
+      "source_line_end": 32,
+      "source_text": "generated reference number,",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_020",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 33,
+      "source_line_end": 33,
+      "source_text": "status \"Browser-Test aktiv\",",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "ui",
+      "strength": "acceptance",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_021",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 34,
+      "source_line_end": 34,
+      "source_text": "clear next-step text,",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_022",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 35,
+      "source_line_end": 35,
+      "source_text": "visible success message.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_023",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 36,
+      "source_line_end": 36,
+      "source_text": "The interaction must not reload the page.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Required UI"
+      ],
+      "claim_type": "forbidden",
+      "strength": "must_not",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "forbidden_substitution"
+      ],
+      "evidence_candidates": [
+        "contract_review",
+        "guard_check",
+        "negative_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_024",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 40,
+      "source_line_end": 40,
+      "source_text": "Premium, calm interface, not a generic Bootstrap look.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_025",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 41,
+      "source_line_end": 41,
+      "source_text": "Define design tokens for colors, radius, spacing, and typography at one functional location.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_026",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 42,
+      "source_line_end": 42,
+      "source_text": "Buttons in the same local action group must use visually compatible height, font family, font size, and alignment.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "context",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement"
+      ],
+      "evidence_candidates": [
+        "contract_review"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_027",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 43,
+      "source_line_end": 43,
+      "source_text": "Button contrast must be readable in desktop and mobile screenshots.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_028",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 44,
+      "source_line_end": 44,
+      "source_text": "Different text sizes are allowed when they create hierarchy, such as hero title versus explanatory copy.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_029",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 45,
+      "source_line_end": 45,
+      "source_text": "Desktop and mobile layouts must both be tested with browser screenshots.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "UX And Visual Requirements"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_030",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 49,
+      "source_line_end": 49,
+      "source_text": "A WordPress test page containing the shortcode must exist or be created by the test harness.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement",
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "contract_review",
+        "practical_test"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_031",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 50,
+      "source_line_end": 50,
+      "source_text": "Playwright/browser evidence is mandatory.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_032",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 51,
+      "source_line_end": 51,
+      "source_text": "Required checks:",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "context",
+      "strength": "must",
+      "binding_status": "needs_confirmation",
+      "contract_candidate": true,
+      "risk_tags": [
+        "binding_requirement"
+      ],
+      "evidence_candidates": [
+        "contract_review"
+      ],
+      "requires_human_confirmation": true
+    },
+    {
+      "claim_id": "claim_033",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 52,
+      "source_line_end": 52,
+      "source_text": "shortcode renders the current plugin, not a sibling plugin;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_034",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 53,
+      "source_line_end": 53,
+      "source_text": "theme chrome is hidden;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_035",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 54,
+      "source_line_end": 54,
+      "source_text": "form fields are visible and usable;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_036",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 55,
+      "source_line_end": 55,
+      "source_text": "submit keeps the same browser page without reload;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_037",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 56,
+      "source_line_end": 56,
+      "source_text": "success/status UI appears after submit;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_038",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 57,
+      "source_line_end": 57,
+      "source_text": "secondary actions are visible and readable;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "context",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_039",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 58,
+      "source_line_end": 58,
+      "source_text": "desktop and mobile screenshots are captured;",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_040",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 59,
+      "source_line_end": 59,
+      "source_text": "console errors and failed browser requests are blocking.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Practical Browser Proof"
+      ],
+      "claim_type": "ui",
+      "strength": "context",
+      "binding_status": "context_only",
+      "contract_candidate": false,
+      "risk_tags": [
+        "user_experience"
+      ],
+      "evidence_candidates": [
+        "browser_evidence",
+        "practical_test"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_041",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 63,
+      "source_line_end": 63,
+      "source_text": "No real email sending.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Non-Goals"
+      ],
+      "claim_type": "boundary",
+      "strength": "context",
+      "binding_status": "boundary",
+      "contract_candidate": false,
+      "risk_tags": [
+        "scope_boundary"
+      ],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_042",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 64,
+      "source_line_end": 64,
+      "source_text": "No real ticket backend.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Non-Goals"
+      ],
+      "claim_type": "boundary",
+      "strength": "context",
+      "binding_status": "boundary",
+      "contract_candidate": false,
+      "risk_tags": [
+        "scope_boundary"
+      ],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_043",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 65,
+      "source_line_end": 65,
+      "source_text": "No login.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Non-Goals"
+      ],
+      "claim_type": "boundary",
+      "strength": "context",
+      "binding_status": "boundary",
+      "contract_candidate": false,
+      "risk_tags": [
+        "scope_boundary"
+      ],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_044",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 66,
+      "source_line_end": 66,
+      "source_text": "No external API.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Non-Goals"
+      ],
+      "claim_type": "boundary",
+      "strength": "context",
+      "binding_status": "boundary",
+      "contract_candidate": false,
+      "risk_tags": [
+        "scope_boundary"
+      ],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    },
+    {
+      "claim_id": "claim_045",
+      "source_file": "spec.md",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "source_line_start": 67,
+      "source_line_end": 67,
+      "source_text": "No admin dashboard.",
+      "section_path": [
+        "MVP Specification: Generic WordPress Intake Shortcode",
+        "Non-Goals"
+      ],
+      "claim_type": "boundary",
+      "strength": "context",
+      "binding_status": "boundary",
+      "contract_candidate": false,
+      "risk_tags": [
+        "scope_boundary"
+      ],
+      "evidence_candidates": [
+        "human_review"
+      ],
+      "requires_human_confirmation": false
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "$schema": "https://specdrift.dev/schemas/verdicts.schema.json",
+  "schema_version": "1.0",
+  "tool": "specdrift verdict",
+  "claim_store": "specdrift.claims.json",
+  "verdicts": [
+    {
+      "claim_id": "claim_001",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 153
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.319Z"
+    },
+    {
+      "claim_id": "claim_002",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 3
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.335Z"
+    },
+    {
+      "claim_id": "claim_003",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 153
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.341Z"
+    },
+    {
+      "claim_id": "claim_004",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 31
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.347Z"
+    },
+    {
+      "claim_id": "claim_005",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 40
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.353Z"
+    },
+    {
+      "claim_id": "claim_006",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 4
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.360Z"
+    },
+    {
+      "claim_id": "claim_007",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 100
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.366Z"
+    },
+    {
+      "claim_id": "claim_008",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 123
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.372Z"
+    },
+    {
+      "claim_id": "claim_009",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 99
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.377Z"
+    },
+    {
+      "claim_id": "claim_010",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 100
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.382Z"
+    },
+    {
+      "claim_id": "claim_011",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 102
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.386Z"
+    },
+    {
+      "claim_id": "claim_012",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 104
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.390Z"
+    },
+    {
+      "claim_id": "claim_013",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 106
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.395Z"
+    },
+    {
+      "claim_id": "claim_014",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 112
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.400Z"
+    },
+    {
+      "claim_id": "claim_015",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 114
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.405Z"
+    },
+    {
+      "claim_id": "claim_016",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 115
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.466Z"
+    },
+    {
+      "claim_id": "claim_017",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 116
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.410Z"
+    },
+    {
+      "claim_id": "claim_018",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 137
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.414Z"
+    },
+    {
+      "claim_id": "claim_019",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 135
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.419Z"
+    },
+    {
+      "claim_id": "claim_020",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 122
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.424Z"
+    },
+    {
+      "claim_id": "claim_021",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 123
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.430Z"
+    },
+    {
+      "claim_id": "claim_022",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 120
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.434Z"
+    },
+    {
+      "claim_id": "claim_023",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 134
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.438Z"
+    },
+    {
+      "claim_id": "claim_024",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 21
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.444Z"
+    },
+    {
+      "claim_id": "claim_025",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 16
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.449Z"
+    },
+    {
+      "claim_id": "claim_026",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 75
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.452Z"
+    },
+    {
+      "claim_id": "claim_027",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.477Z"
+    },
+    {
+      "claim_id": "claim_028",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 57
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.456Z"
+    },
+    {
+      "claim_id": "claim_029",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.481Z"
+    },
+    {
+      "claim_id": "claim_030",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.487Z"
+    },
+    {
+      "claim_id": "claim_031",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.493Z"
+    },
+    {
+      "claim_id": "claim_032",
+      "verdict": "out_of_scope",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "structural list introduction line, not a standalone requirement",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.461Z"
+    },
+    {
+      "claim_id": "claim_033",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.499Z"
+    },
+    {
+      "claim_id": "claim_034",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.503Z"
+    },
+    {
+      "claim_id": "claim_035",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.508Z"
+    },
+    {
+      "claim_id": "claim_036",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.514Z"
+    },
+    {
+      "claim_id": "claim_037",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.519Z"
+    },
+    {
+      "claim_id": "claim_038",
+      "verdict": "covered",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [
+        {
+          "file": "example-intake.php",
+          "line": 115
+        }
+      ],
+      "reason": "",
+      "approved_by": "",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.470Z"
+    },
+    {
+      "claim_id": "claim_039",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.524Z"
+    },
+    {
+      "claim_id": "claim_040",
+      "verdict": "accepted_deviation",
+      "source_hash": "67210e7eced7b5b3ad4130fc57cf9fb9467af071b67c9dc1c9fba20a9f1908e3",
+      "evidence": [],
+      "reason": "browser proof deferred to the WordPress integration test stage",
+      "approved_by": "validation-run (Claude Fable 5) — production waivers need a human approver",
+      "overwrote_previous": true,
+      "recorded_at": "2026-06-11T13:27:32.530Z"
+    }
+  ],
+  "additions": []
+}
