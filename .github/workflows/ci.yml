@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Audit gate (M0-N04)
+        run: npm audit --audit-level=critical
+      - name: Lint
+        run: npm run lint
+      - name: Schemas
+        run: npm run schemas
+      - name: Tests
+        run: npm test
