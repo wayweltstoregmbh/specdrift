@@ -38,7 +38,7 @@ function startServer(cwd) {
           pending.delete(id);
           reject(new Error(`timeout waiting for ${method}`));
         }
-      }, 8000);
+      }, 30000);
       timer.unref();
     });
   }
