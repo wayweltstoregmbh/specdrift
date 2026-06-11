@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://specdrift.dev/schemas/claims.schema.json",
+  "title": "SpecDrift claim store",
+  "type": "object",
+  "required": ["schema_version", "tool", "extracted_at", "sources", "claims"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "tool": { "type": "string", "enum": ["specdrift extract"] },
+    "extracted_at": { "type": "string", "minLength": 20 },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["file", "hash", "line_count"],
+        "additionalProperties": false,
+        "properties": {
+          "file": { "type": "string", "minLength": 1 },
+          "hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "line_count": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "source_file",
+          "source_hash",
+          "source_line_start",
+          "source_line_end",
+          "source_text",
+          "section_path",
+          "claim_type",
+          "strength",
+          "binding_status",
+          "contract_candidate",
+          "risk_tags",
+          "evidence_candidates",
+          "requires_human_confirmation"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": { "type": "string", "pattern": "^claim_\\d{3,}$" },
+          "source_file": { "type": "string", "minLength": 1 },
+          "source_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "source_line_start": { "type": "integer", "minimum": 1 },
+          "source_line_end": { "type": "integer", "minimum": 1 },
+          "source_text": { "type": "string", "minLength": 4 },
+          "section_path": { "type": "array", "items": { "type": "string" } },
+          "claim_type": {
+            "type": "string",
+            "enum": [
+              "security_must",
+              "technical_must",
+              "forbidden",
+              "data",
+              "ui",
+              "acceptance",
+              "feature",
+              "context",
+              "boundary"
+            ]
+          },
+          "strength": {
+            "type": "string",
+            "enum": ["must", "must_not", "should", "acceptance", "context"]
+          },
+          "binding_status": {
+            "type": "string",
+            "enum": ["needs_confirmation", "context_only", "boundary", "confirmed_contract"]
+          },
+          "contract_candidate": { "type": "boolean" },
+          "risk_tags": { "type": "array", "items": { "type": "string" } },
+          "evidence_candidates": { "type": "array", "items": { "type": "string" } },
+          "requires_human_confirmation": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
