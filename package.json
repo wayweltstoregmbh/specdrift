@@ -12,7 +12,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "node --test \"tests/**/*.test.js\"",
+    "test": "node tooling/test.js",
     "lint": "node tooling/lint.js",
     "schemas": "node bin/specdrift.js schema check"
   }
