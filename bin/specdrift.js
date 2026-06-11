@@ -45,6 +45,12 @@ function main(argv) {
     return 1;
   }
   const rest = args.slice(matched.split(" ").length);
+  if (rest.includes("--help")) {
+    const def = commands[matched];
+    process.stdout.write(`specdrift ${matched} — ${def.summary}\n`);
+    process.stdout.write(`Usage: specdrift ${matched} ${def.usage || ""}\n`);
+    return 0;
+  }
   try {
     return commands[matched].run(rest);
   } catch (err) {

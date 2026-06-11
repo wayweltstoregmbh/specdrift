@@ -316,6 +316,30 @@ Positiv-/Negativ-Testpaket nach diesem Schema.** Beispiel-Vorlagen:
 
 ---
 
+## Usability-Fixes (aus dem Blind-Test 2026-06-12)
+
+Ein Subagent ohne Vorwissen durchlief Setup→Drift-Report nur mit der README
+(M4-P06-Proxy: bestanden) und meldete 7 Friction-Punkte. Daraus abgeleitete
+Tests:
+
+### Positiv
+- UX-P01: `claims list` zeigt IDs, Typen und Quellzeilen ohne JSON-Lektüre.
+- UX-P02: `--help` funktioniert auf jedem Subkommando mit Usage-Zeile.
+- UX-P03: Report- und Gate-Konsolenausgabe benennen gedriftete Claims mit
+  Claim-ID und Quellzeile (nicht nur Summen).
+
+### Negativ
+- UX-N01: `claims list` ohne Store → Fehler nennt `extract` als nächsten
+  Schritt.
+- UX-N02: `--help` auf unbekanntem Kommando → weiterhin Fehler mit Hinweis.
+- UX-N03: `report --strict` bei unvollständigen Verdicts → `fail:`-Präfix,
+  nicht `warn:`.
+
+Dokumentations-Fixes ohne Testbedarf: Installations-/Aufrufabschnitt,
+`--json`-Dokumentation, Hinweis auf Verdict-Pflicht für context-Claims
+(`out_of_scope` mit Begründung). Offen für v0.2: Verdict-Vokabular für rein
+beschreibende Zeilen, Report-Datei-Default.
+
 ## Zähltafel
 
 | Meilenstein | Positiv | Negativ |

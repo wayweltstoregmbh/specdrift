@@ -22,10 +22,23 @@ and can I prove it?**
    requirements, waivers and unrequested additions. The CI gate blocks
    merges on drift, low coverage or changed files without spec coverage.
 
+## Installation
+
+Requires Node.js >= 18, nothing else (zero dependencies).
+
+```bash
+git clone https://github.com/wayweltstoregmbh/specdrift.git
+node specdrift/bin/specdrift.js --help
+```
+
+Until the npm release ships, `specdrift` below means `node <path-to>/specdrift/bin/specdrift.js`.
+Every command supports `--help` and `--json` (machine-readable output).
+
 ## Quick start (CLI)
 
 ```bash
 specdrift extract spec.md
+specdrift claims list                  # ids, types and source lines of all claims
 specdrift status
 specdrift confirm --accept-current
 specdrift verdict record claim_001 covered --evidence src/orders.js:42
@@ -33,6 +46,11 @@ specdrift verdict record claim_002 accepted_deviation \
   --reason "banner instead of page, agreed with customer" --approved-by you@example.com
 specdrift report --strict
 ```
+
+Note: **every** extracted claim needs a verdict before the report is
+complete — including purely descriptive `context` lines. For lines that are
+not real requirements, record `out_of_scope` with a short reason; that keeps
+the loss-aware accounting honest without inventing fake evidence.
 
 ## MCP server (for Claude Code, Cursor, etc.)
 
