@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://specdrift.dev/schemas/verdicts.schema.json",
+  "title": "SpecDrift verdicts file",
+  "type": "object",
+  "required": ["schema_version", "tool", "claim_store", "verdicts", "additions"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "tool": { "type": "string", "enum": ["specdrift verdict"] },
+    "claim_store": { "type": "string", "minLength": 1 },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "verdict",
+          "source_hash",
+          "evidence",
+          "reason",
+          "approved_by",
+          "overwrote_previous",
+          "recorded_at"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": { "type": "string", "pattern": "^claim_\\d{3,}$" },
+          "verdict": {
+            "type": "string",
+            "enum": ["covered", "missing", "distorted", "out_of_scope", "accepted_deviation"]
+          },
+          "source_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["file"],
+              "properties": {
+                "file": { "type": "string", "minLength": 1 },
+                "line": { "type": ["integer", "null"], "minimum": 1 }
+              }
+            }
+          },
+          "reason": { "type": "string" },
+          "approved_by": { "type": "string" },
+          "overwrote_previous": { "type": "boolean" },
+          "recorded_at": { "type": "string", "minLength": 20 }
+        }
+      }
+    },
+    "additions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence", "note", "recorded_at"],
+        "additionalProperties": false,
+        "properties": {
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["file"],
+              "properties": {
+                "file": { "type": "string", "minLength": 1 },
+                "line": { "type": ["integer", "null"], "minimum": 1 }
+              }
+            }
+          },
+          "note": { "type": "string", "minLength": 4 },
+          "recorded_at": { "type": "string", "minLength": 20 }
+        }
+      }
+    }
+  }
+}
