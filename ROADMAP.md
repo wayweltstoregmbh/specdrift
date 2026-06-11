@@ -235,31 +235,36 @@ konfigurierbare Schwellen. Deckt P7.
 **→ Ab hier ist das OSS-Produkt veröffentlichbar (v0.1 public). Launch-Gate:
 alle KPI-Gates aus 2.2 grün + Doku + 3 Beispiel-Repos.**
 
-### M6 — vServer: Hosted Evidence-API (≈ 4–6 Tage)
+### M6 — Hosted Evidence-API als WordPress-Plugin (≈ 4–6 Tage)
 
-REST-API auf eurem vServer: Drift-Reports und Claim-Stores hochladen,
-**unveränderlich** speichern (Hash-Kette: jeder Report referenziert
-Vorgänger-Hash), Team-Workspaces, API-Keys, Share-Links für Kunden/Auditoren.
-Deckt P6 + P11. Stack bewusst klein: Node + Fastify, SQLite (später Postgres),
-Caddy als Reverse-Proxy mit TLS, tägliche Backups, EU-Hosting (DSGVO-Argument).
+ENTSCHEIDUNG (2026-06-12, Kostenregel): Statt vServer + Node-Dienst läuft die
+Evidence-API auf **einfachem Webhosting (PHP 8 + MySQL)** als WordPress-Plugin
+`specdrift-cloud` mit REST-Endpoints (`wp-json/specdrift/v1/...`): Drift-
+Reports und Claim-Stores hochladen, hash-verkettet speichern (jeder Report
+referenziert den Vorgänger-Hash), Team-Workspaces, API-Keys (nur als Hash in
+eigenen Tabellen), Share-Links für Kunden/Auditoren. Deckt P6 + P11. Kein
+Node, kein Reverse-Proxy, keine Server-Wartung; TLS und Backups liefert der
+Hoster, ergänzt um einen eigenen Export-Cron. EU-Hosting (DSGVO-Argument).
 
-Architektur-Grenze (verbindlich): Die Evidence-API ist ein eigenständiger
-Node-Dienst und bleibt es. Das WordPress-Portal (M7) ist reiner Konsument über
-eine interne Provisioning-Schnittstelle. Kein geteilter DB-Zugriff, keine
-Schlüssel im Klartext in WordPress. Ein kompromittiertes WordPress darf
-Beweisdaten weder lesen noch fälschen können — nur Keys provisionieren und
-widerrufen.
-
-Zusätzlich in M6: interne Admin-/Provisioning-Endpoints (Key erstellen,
-rotieren, widerrufen; Workspace anlegen/sperren), abgesichert über separates
-internes Secret + IP-Bindung, als Vertrag für das M7-Portal.
+Revidierte Architektur-Grenze (bewusster Trade-off): API und Portal teilen
+sich die WordPress-Instanz. Die Unveränderlichkeits-Garantie stützt sich
+damit auf die Hash-Kette plus **externes Chain-Head-Anchoring**: Der jeweils
+aktuelle Ketten-Hash jedes Workspaces wird periodisch an einen externen Ort
+gespiegelt (z. B. automatischer Commit in ein Git-Repo), sodass nachträgliche
+Manipulation der Hosting-DB extern beweisbar bleibt. Der API-Code wird als
+eigenständige Schicht im Plugin gekapselt (eigene Tabellen, kein
+wp_options-Missbrauch), damit eine spätere Extraktion in einen separaten
+Dienst für Compliance-Kunden ein Deployment-Schritt ist, kein Rewrite.
+Interne Provisioning-Endpoints entfallen: Portal und API teilen sich die
+Funktionsschicht direkt.
 
 | Abnahmekriterium | Test |
 | --- | --- |
 | API-Contract-Tests für alle Endpoints (Upload, List, Get, Share) | Positiv |
 | Upload ohne/mit falschem API-Key → 401/403; fremder Workspace → 403 | Negativ (Security) |
 | Manipulierter Report (Hash stimmt nicht) → abgelehnt, Vorfall geloggt | Negativ (Integrität) |
-| Provisioning-Endpoint ohne internes Secret / von fremder IP → 403 | Negativ (Security) |
+| Chain-Head-Anchoring: externer Anker weicht nach DB-Manipulation nachweisbar ab | Positiv (Integrität) |
+| REST-Endpoints: `permission_callback` greift, `$wpdb->prepare` überall (SQL-Injection-Suite) | Negativ (Security, WP-spezifisch) |
 | Widerrufener Key verliert Zugriff in < 60 s auf allen Endpoints | Negativ |
 | Hash-Kette: nachträgliche Änderung eines gespeicherten Reports ist erkennbar (Verifikations-Endpoint) | Positiv |
 | Rate-Limiting greift (Test mit Burst) | Negativ |
@@ -270,22 +275,21 @@ internes Secret + IP-Bindung, als Vertrag für das M7-Portal.
 
 ### M7 — WordPress-Portal: Registrierung, Bezahlung, Keys, Report-Viewer (≈ 5–7 Tage)
 
-Kundenseite als WordPress-Site auf dem vServer (eure Kernkompetenz):
-Marketing-Seiten, Registrierung/Login, Abo-Verwaltung und Bezahlung,
-Key-Verwaltung und ein eingebetteter Read-only-Report-Viewer. Umgesetzt als
-eigenes Plugin (`specdrift-portal`) nach eurem
+Kundenseite auf derselben WordPress-Instanz (einfaches Webhosting, eure
+Kernkompetenz): Marketing-Seiten, Registrierung/Login, Abo-Verwaltung und
+Bezahlung, Key-Verwaltung und ein Read-only-Report-Viewer. Umgesetzt im
+selben Plugin-Stack wie M6 (`specdrift-cloud`) nach eurem
 `wordpress-shortcode-ui-standard`.
 
-Aufgabenteilung:
+Aufgabenteilung (innerhalb einer Instanz, aber sauber geschichtet):
 
-- **WordPress besitzt:** Benutzerkonten, Abos/Rechnungen, Portal-UI.
-- **Evidence-API besitzt:** Workspaces, Keys (nur als Hash gespeichert),
-  Reports, Hash-Kette. WordPress spricht ausschließlich die internen
-  Provisioning-Endpoints aus M6 an.
-- **Key-Fluss:** Abo aktiv → WP ruft Provisioning auf → Key wird dem Nutzer
-  **genau einmal** angezeigt, danach existiert nur noch der Hash. Abo
-  gekündigt/Zahlung fehlgeschlagen → automatischer Widerruf über denselben
-  Weg.
+- **Portal-Schicht:** Benutzerkonten, Abos/Rechnungen, Portal-UI.
+- **API-Schicht (gekapselt, eigene Tabellen):** Workspaces, Keys (nur als
+  Hash gespeichert), Reports, Hash-Kette, Chain-Head-Anchoring.
+- **Key-Fluss:** Abo aktiv → Portal-Schicht ruft die API-Funktionsschicht
+  direkt auf → Key wird dem Nutzer **genau einmal** angezeigt, danach
+  existiert nur noch der Hash. Abo gekündigt/Zahlung fehlgeschlagen →
+  automatischer Widerruf über denselben Weg.
 
 Bezahlung — ENTSCHIEDEN (2026-06-11): **Option A, WooCommerce + Stripe.**
 Begründung: minimale laufende Kosten (nur Stripe-Gebühren, kein ~5 %
@@ -376,7 +380,7 @@ Kandidaten, jeweils mit eigenem Pos/Neg-Testpaket vor Merge:
 | --- | --- | --- |
 | M0–M3 | Woche 1–3 | Kern + Benchmark, intern nutzbar |
 | M4–M5 | Woche 3–5 | MCP + CI-Gate, **OSS-Launch v0.1** |
-| M6–M7 | Woche 5–9 | vServer-API + WordPress-Portal (Konto, Bezahlung, Keys), Hosted-Beta |
+| M6–M7 | Woche 5–9 | WordPress-Plugin `specdrift-cloud` auf einfachem Webhosting: Evidence-API + Portal (Konto, Bezahlung, Keys), Hosted-Beta |
 | M8 | Woche 8–14 | Beta, erste Zahlungen, Markt-Gate-Entscheidung |
 | M9 | ab Woche 14 | Ausbau nach Daten, nicht nach Bauchgefühl |
 
